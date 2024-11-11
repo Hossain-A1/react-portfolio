@@ -1,13 +1,22 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import React, { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 const App = () => {
-  return (
-    <div className=''>
-     <Navbar/>
-    </div>
-  )
-}
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-export default App
+  const toggleTheme = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+  };
+  return (
+    <div
+      className={`${
+        isDarkMode ? "bg-black text-white" : "bg-slate-50 text-black"
+      }`}
+    >
+      <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+    </div>
+  );
+};
+
+export default App;
