@@ -9,8 +9,8 @@ import close from "../../src/assets/portfolio_images/images/close-white.png";
 import close_black from "../../src/assets/portfolio_images/images/close-black.png";
 
 const navLinks = [
-  { label: "Home", href: "/home" },
-  { label: "About me", href: "/about" },
+  { label: "Home", href: "/#hero" },
+  { label: "About me", href: "/#about" },
   { label: "Services", href: "/services" },
   { label: "My Work", href: "/work" },
   { label: "Contact me", href: "/contact" },
@@ -41,9 +41,18 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
           alt={isDarkMode ? "sun icon" : "moon icon"}
         />
 
-        <button className='flex gap-3 text-xl items-center justify-center px-8 py-2.5 border border-black rounded-full font-light max-lg:hidden'>
-          contact <img className='w-4' src={arrow} alt='' />
-        </button>
+<button
+              className={`flex gap-3 text-xl items-center max-md:hidden justify-center px-8 py-2.5 border ${
+                isDarkMode ? "border-white" : "border-black"
+              } rounded-full font-light `}
+            >
+              contact{" "}
+              <img
+                className='w-4'
+                src={isDarkMode ? arrow_light : arrow}
+                alt='arrow icon'
+              />
+            </button>
 
         <img
           onClick={() => setOpenModal(true)}
