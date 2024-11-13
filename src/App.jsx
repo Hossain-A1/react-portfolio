@@ -23,7 +23,7 @@ const App = () => {
       <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       <Hero isDarkMode={isDarkMode} />
       <About isDarkMode={isDarkMode} />
-      <Services />
+      <Services isDarkMode={isDarkMode} />
       <MyWork />
       <Contact />
       <Footer/>

@@ -10,7 +10,7 @@ const About = ({isDarkMode}) => {
     <div id='about' className={`containers py-20 ${isDarkMode ?"text-white":"text-black"} `}>
       {/* Section Title */}
       <div className="text-center mb-10">
-        <h2 className="text-xl font-semibold ">Introduction</h2>
+        <h2 className="text-xl font-medium italic ">Introduction</h2>
         <h1 className="text-4xl font-bold ">About Me</h1>
      
       </div>
@@ -24,7 +24,7 @@ const About = ({isDarkMode}) => {
 
      <div className='flex-1' >
      <div className='flex flex-col max-lg:items-center gap-4' >
-     <p className="font-light text-lg mb-10">
+     <p className="font-light text-lg max-lg:text-center mb-10">
           I’m an experienced Full-Stack Developer with over 5 years of expertise in building scalable solutions. 
           Throughout my career, I’ve contributed to impactful projects and worked with diverse teams.
         </p>
