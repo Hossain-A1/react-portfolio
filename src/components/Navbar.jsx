@@ -7,28 +7,33 @@ import menu from "../../src/assets/portfolio_images/images/menu-black.png";
 import menu_white from "../../src/assets/portfolio_images/images/menu-white.png";
 import close from "../../src/assets/portfolio_images/images/close-white.png";
 import close_black from "../../src/assets/portfolio_images/images/close-black.png";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", href: "/#hero" },
   { label: "About me", href: "/#about" },
-  { label: "Services", href: "/services" },
-  { label: "My Work", href: "/work" },
-  { label: "Contact me", href: "/contact" },
+  { label: "Services", href: "/#services" },
+  { label: "My Work", href: "/#work" },
+  { label: "Contact me", href: "/#contact" },
 ];
 
 const Navbar = ({ isDarkMode, toggleTheme }) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div className='containers flex justify-between items-center py-2 border-b '>
+    <div
+      className={`containers flex justify-between items-center py-2 border-b sticky top-0 z-20 ${
+        !isDarkMode ? "bg-slate-50" : "bg-black"
+      } `}
+    >
       <h1 className='text-4xl font-semibold flex items-center'>
         Hossain <span className='w-2 h-2 rounded-full bg-red-700 mt-5'></span>
       </h1>
 
       <ul className='flex items-center gap-6 shadow-sm px-6 py-4 rounded-full max-lg:hidden'>
         {navLinks.map((item) => (
-          <li className='text-lg font-light' key={item.label}>
-            {item.label}
+          <li className='text-lg font-light cursor-pointer' key={item.label}>
+            <Link to={item.href}>{item.label}</Link>
           </li>
         ))}
       </ul>
@@ -41,18 +46,18 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
           alt={isDarkMode ? "sun icon" : "moon icon"}
         />
 
-<button
-              className={`flex gap-3 text-xl items-center max-md:hidden justify-center px-8 py-2.5 border ${
-                isDarkMode ? "border-white" : "border-black"
-              } rounded-full font-light `}
-            >
-              contact{" "}
-              <img
-                className='w-4'
-                src={isDarkMode ? arrow_light : arrow}
-                alt='arrow icon'
-              />
-            </button>
+        <button
+          className={`flex gap-3 text-xl items-center max-md:hidden justify-center px-8 py-2.5 border ${
+            isDarkMode ? "border-white" : "border-black"
+          } rounded-full font-light `}
+        >
+          contact{" "}
+          <img
+            className='w-4'
+            src={isDarkMode ? arrow_light : arrow}
+            alt='arrow icon'
+          />
+        </button>
 
         <img
           onClick={() => setOpenModal(true)}

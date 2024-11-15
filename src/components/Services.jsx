@@ -6,7 +6,7 @@ import team_1 from '../assets/portfolio_images/images/project-icon.png'
 
 const Services = ({isDarkMode}) => {
   return (
-    <div className='containers'>
+    <div id='services' className='containers py-20'>
 
       <div className='flex flex-col gap-1 items-center justify-center'>
       <h2 className="text-xl font-medium italic ">What i offer</h2>
@@ -17,28 +17,28 @@ const Services = ({isDarkMode}) => {
         </p>
 
         <div className='flex-wrap gap-4 md:flex justify-center items-center '>
-          <div className='p-4 w-72 h-[13.5rem] rounded-lg shadow-md hover:scale-y-105 duration-300 space-y-2 border border-white'>
+          <div className='p-4 w-72 h-[13.5rem] rounded-lg shadow-md hover:scale-105 duration-300 space-y-2 border border-white'>
             <img className='w-10' src={web} alt="web" />
             <h3 className='font-medium'>Web design</h3>
             <p className='text-base'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita...</p>
 
             <p className='text-slate-500'>Read more →</p>
           </div>
-          <div className='p-4 w-72 h-[13.5rem] rounded-lg shadow-md hover:scale-y-105 duration-300 space-y-2  border border-white'>
+          <div className='p-4 w-72 h-[13.5rem] rounded-lg shadow-md hover:scale-105 duration-300 space-y-2  border border-white'>
           <img className='w-10' src={re_web} alt="web" />
             <h3 className='font-medium'>Web re-design</h3>
             <p className='text-base'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita...</p>
 
             <p className='text-slate-500'>Read more →</p>
           </div>
-          <div className='p-4 w-72 h-[13.5rem] rounded-lg shadow-md hover:scale-y-105 duration-300 space-y-2  border border-white'>
+          <div className='p-4 w-72 h-[13.5rem] rounded-lg shadow-md hover:scale-105 duration-300 space-y-2  border border-white'>
           <img className='w-10' src={code} alt="web" />
             <h3 className='font-medium'>Web development</h3>
             <p className='text-base'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita...</p>
 
             <p className='text-slate-500'>Read more →</p>
           </div>
-          <div className='p-4 w-72 h-[13.5rem] rounded-lg shadow-md hover:scale-y-105 duration-300 space-y-2  border border-white'>
+          <div className='p-4 w-72 h-[13.5rem] rounded-lg shadow-md hover:scale-105 duration-300 space-y-2  border border-white'>
           <img className='w-10' src={ isDarkMode? team:team_1} alt="web" />
             <h3 className='font-medium'>Team work</h3>
             <p className='text-base'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita...</p>

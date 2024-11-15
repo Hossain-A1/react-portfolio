@@ -1,10 +1,10 @@
 import React from "react";
 import download from "../assets/portfolio_images/images/download-icon.png";
-import img_dev from "../assets/portfolio_images/images/protfolio-img.jpg";
+import hero_img from "../assets/portfolio_images/images/hero_img.jpeg";
 const Hero = ({ isDarkMode }) => {
   return (
     <div
-      id='hero'
+      id='/hero'
       className='containers py-20 flex justify-center items-center'
     >
       <div
@@ -13,8 +13,8 @@ const Hero = ({ isDarkMode }) => {
         } max-w-4xl px-6`}
       >
         <img
-          className='w-28 h-28 mx-auto rounded-full border-4 border-white mb-4'
-          src={img_dev}
+          className='w-32 h-32 mx-auto shadow-md rounded-full border-4 border-white mb-4'
+          src={hero_img}
           alt='Eliana Jade'
         />
         <h1 className='text-4xl sm:text-5xl font-semibold mb-4'>
