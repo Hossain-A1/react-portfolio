@@ -4,7 +4,7 @@ import hero_img from "../assets/portfolio_images/images/hero_img.jpeg";
 const Hero = ({ isDarkMode }) => {
   return (
     <div
-      id='/hero'
+      id='hero'
       className='containers py-20 flex justify-center items-center'
     >
       <div
@@ -32,7 +32,7 @@ const Hero = ({ isDarkMode }) => {
           }
         </p>
         <div className='flex justify-center gap-6'>
-          <button className='bg-gradient-to-r max-sm:text-sm whitespace-nowrap from-orange-400 to-pink-600 text-white py-2 px-8 rounded-full text-xl transition hover:opacity-80'>
+          <button  className='bg-gradient-to-r max-sm:text-sm whitespace-nowrap from-orange-400 to-pink-600 text-white py-2 px-8 rounded-full text-xl transition hover:opacity-80'>
             Contact me
           </button>
           <button className='bg-white max-sm:text-sm whitespace-nowrap flex items-center justify-center gap-2 text-gray-900 py-2 px-8 rounded-full text-xl border-2 border-gray-900 transition hover:opacity-80'>
